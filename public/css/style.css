@@ -1,0 +1,1144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    width: 100vw;
+    height: 100vh;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at center, #e2d3c0, #789686 60%, #99c1b6 100%);
+    overflow-x: hidden;
+
+}
+.container{
+    border: 2px solid black;
+    width: 24vw;
+    height: 60vh;
+    margin-top: 5vh;
+    border-radius: 10px;
+}
+.reg-container{
+   height: 68vh;
+   width: 26vw;
+}
+.container h1{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    font-size: 1.7rem;
+}
+.input-group{
+    position: relative;
+    margin: 15px;
+    width: 20vw;
+    margin-left: 30px;
+    margin-top: 25px;
+}
+.input-gp{
+    margin-left: 40px;
+}
+.toggle-password{
+    position: absolute;
+    top: 50%;
+    left: 265px;
+    transform: translateY(-50%);
+    color: #789686;
+    right: 10px;
+}
+#register-submit{
+    margin-left: 40px;
+}
+.input-group .icon{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #789686;
+}
+.input-group input{
+    padding: 10px 10px 10px 35px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #aaa;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+.forget-pass{
+    margin-left: 32px;
+    margin-top: 6px;
+    background: none;
+    border: none;
+    font-size: 1.03rem;
+}
+.login-button{
+   background: none;
+   border: none;
+   font-size: 1.3rem;
+   color: white;
+}
+.login-button:hover{
+    text-decoration: underline;
+}
+.login-btn{
+   margin-left: 32px;
+   width: 20vw;
+   margin-top: 18px;
+   padding: 8px;
+   font-size: 1.2rem;
+   border-radius: 10px;
+   background-color: #789686;
+}
+.login-btn:hover{
+    background-color: #99c1b6;
+}
+.resister-p{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+.resister-p p{
+    font-size: 1.05rem;
+}
+.regi-btn{
+    font-size: 1.1rem;
+    background: none;
+    border: none;
+}
+.header-sec {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    height: 12vh;
+    font-size: 1.3rem;
+    width: 100%; 
+    /* border: 1px solid black; */
+    border-bottom: 1px solid black;
+}
+.nav-items a{
+    text-decoration: none;
+    font-size: 1.3rem;
+    margin-right: 40px;
+    color: white;
+}
+.nav-items a:hover{
+    text-decoration: underline;
+}
+.secret-h h2{
+    margin-left: 10px;
+    margin: 0; 
+    font-size: 1.7rem;
+    color: teal;
+}
+.secret-img{
+    width: 380px;               
+    height: 380px;              
+    overflow: visible;          
+    position: relative;
+    margin-right: 200px;
+    margin-top: 80px;
+}
+.rotate-img{
+    display: block;
+    max-width: 100%;          
+    max-height: 100%;           
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transform: rotate(-45deg);  
+    transform-origin: center center; 
+}
+.box{
+    height: 30vh;
+    width: 35vw;
+}
+.box h1{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.box p{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    font-size: 1.1rem;
+}
+.register-btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.register-btn button{
+    padding: 9px;
+    border-radius: 17px;
+    width: 100px;
+    font-size: 1.2rem;
+    background-color: #789686;
+    cursor: pointer;
+}
+.register-btn button:hover{
+    background-color: #99c1b6;
+}
+.secret-container{
+    width: 35vw;
+    height: 65vh;
+}
+.container .icons{
+    width: 16vh;
+}
+.secret-container a{
+    text-decoration: none;
+    border: 1px solid black;
+    margin-top: 50px;
+}
+.secret-container h2{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+.secret-para{
+    display: flex;
+    justify-content: center;
+}
+.secret-text{
+    margin: 17px;
+    font-size: 1.2rem;
+}
+.secret-btn {
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+}
+
+.secret-btn a {
+    font-size: 1.1rem;
+    padding: 8px 16px;
+    color: black;
+    background-color: #789686;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.secret-btn a:hover {
+    background-color: #5f7e6e;
+}
+
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-right: 20px;
+}
+.login-toggle{
+    left: 277px;
+}
+@media (max-width: 1108px){
+.secret-img{
+    margin-right: 80px;
+    height: 300px;
+    width: 300px;
+}
+.box{
+    height: 30vh;
+}
+.box h1{
+    font-size: 1.5rem;
+}
+.box p{
+    font-size: 1rem;
+}
+.register-btn button{
+    font-size: 1.1rem;
+}
+.reg-container{
+    width: 29vw;
+    height: 66vh;
+    margin-top: 5vh;
+}
+.reg-container h1{
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+.input-group input{
+    padding: 9px 9px 9px 31px;
+    font-size: 0.9rem;
+    width: 20vw;
+}
+.login-btn{
+    padding: 8px;
+    font-size: 1rem;
+}
+.resister-p p{
+    font-size: 1rem;
+}
+.resister-p button{
+    font-size: 1.1rem;
+}
+.resister-p p{
+    font-size: 1rem;
+    margin-bottom: 6px;
+}
+.resister-p button{
+    font-size: 1rem;
+    margin-bottom: 6px;
+}
+.reg-toggle{
+    left: 190px;
+}
+}
+
+/* Tablets and below */
+@media (max-width: 1024px){
+.hamburger{
+    display: block;
+}
+
+.nav-items{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 12vh;
+    right: 0;
+    background-color: #789686;
+    width: 100%;
+    padding: 20px;
+    z-index: 99;
+}
+
+.nav-items a{
+    margin: 10px 0;
+    color: white;
+    font-size: 1.2rem;
+  }
+
+.nav-items.show{
+    display: flex;
+  }
+.secret-img{
+    margin-right: 80px;
+    height: 287px;
+    width: 287px;
+}
+.box{
+    height: 30vh;
+}
+.box h1{
+    font-size: 1.5rem;
+}
+.box p{
+    font-size: 1rem;
+}
+.register-btn button{
+    font-size: 1.1rem;
+}
+.reg-container{
+    height: 63vh;
+}
+.reg-container h1{
+    font-size: 1.4rem;
+    margin-top: 8px;
+}
+.input-group input{
+    font-size: 0.8rem;
+}
+.login-btn{
+    padding: 6px;
+}
+.resister-p p{
+    font-size: 1rem;
+    margin-bottom: 6px;
+}
+.resister-p button{
+    font-size: 1rem;
+    margin-bottom: 6px;
+}
+.login-container{
+    width: 27vw;
+    height: 55vh;
+}
+}
+
+@media (max-width: 768px){
+.secret-img{
+    margin-right: 40px;
+    height: 240px;
+    width: 240px;
+}
+.box{
+    height: 30vh;
+}
+.box h1{
+    font-size: 1.3rem;
+}
+.box p{
+    display: flex;
+    justify-content: center;
+    font-size: 0.9rem;
+}
+.register-btn button{
+    font-size: 1rem;
+    padding: 3px;
+}
+.reg-container{
+    height: 64vh;
+    width: 36vw;
+}
+.container h1{
+    font-size: 1.4rem;
+    margin-top: 8px;
+}
+.input-group{
+    width: 100%;
+    margin: 20px 0;
+    position: relative;
+}
+.input-group input {
+    width: 80%;
+    padding: 8px 8px 8px 28px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    margin-left: 25px;
+}
+.input-grp{
+    width: 100%;
+    margin: 20px 0;
+    position: relative;
+}
+.input-grp input{
+    width: 85%;
+    padding: 8px 8px 8px 31px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    margin-left: 21px;
+}
+
+.login-container{
+    width: 35vw;
+}
+.form-actions button{
+    margin-left: 15px;
+    font-size: 1rem;
+ }
+.input-group .icon{
+    margin-left: 22px;
+}
+.toggle-password{
+    left: 220px;
+}
+.register-bt{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.login-btn{
+    width: 90%;
+    padding: 7px;
+    margin-top: 15px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 40px;
+}
+
+.resister-p p{
+    font-size: 1rem;
+    margin-bottom: 6px;
+}
+.resister-p button{
+    font-size: 1rem;
+    margin-bottom: 6px;
+}
+.hamburger{
+    font-size: 1.7rem;
+}
+}
+
+@media (max-width: 590px){
+.secret-img{
+    margin-right: 15px;
+    height: 200px;
+    width: 200px;
+}
+.box{
+    height: 30vh;
+}
+.box h1{
+    font-size: 1.3rem;
+}
+.box p{
+    display: flex;
+    justify-content: center;
+    font-size: 0.8rem;
+}
+.register-btn button{
+    font-size: 1rem;
+    padding: 3px;
+}
+.reg-container{
+    height: 64vh;
+    width: 50vw;
+}
+.container h1{
+    font-size: 1.4rem;
+    margin-top: 8px;
+}
+.input-group{
+    width: 100%;
+    margin: 20px 0;
+    position: relative;
+}
+.input-group input {
+    width: 85%;
+    padding: 8px 8px 8px 31px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    margin-left: 17px;
+}
+.input-group .icon{
+    margin-left: 13px;
+}
+.toggle-password{
+    left: 235px;
+}
+.register-bt{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.login-btn{
+    width: 90%;
+    padding: 7px;
+    margin-top: 15px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 40px;
+}
+
+.resister-p p{
+    font-size: 1rem;
+    margin-bottom: 6px;
+}
+.resister-p button{
+    font-size: 1rem;
+    margin-bottom: 6px;
+}
+.login-container{
+    width: 40vw;
+    height: 52vh;
+}
+.login-toggle{
+    left: 190px;
+}
+.secret-h h2{
+    font-size: 1.5rem;
+}
+.hamburger{
+    font-size: 1.6rem;
+}
+}
+
+@media (max-width: 480px) {
+  .secret-img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .container h1,
+  .box h1 {
+    font-size: 1.2rem;
+  }
+
+  .secret-text {
+    font-size: 0.9rem;
+  }
+
+  .header-sec {
+    font-size: 1rem;
+  }
+
+  .nav-items a {
+    font-size: 1rem;
+    margin-right: 20px;
+  }
+
+  .secret-btn {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .secret-btn a {
+    width: 80%;
+    text-align: center;
+  }
+  .box{
+    height: 38vh;
+  }
+  .secret-img{
+    margin-right: 5px;
+    height: 150px;
+    width: 150px;
+}
+.reg-container{
+    height: 62vh;
+    width: 54vw;
+}
+.container h1{
+    font-size: 1.4rem;
+    margin-top: 8px;
+}
+.input-group{
+    width: 100%;
+    margin: 20px 0;
+    position: relative;
+}
+.input-group input {
+    width: 85%;
+    padding: 8px 8px 8px 31px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    margin-left: 17px;
+}
+.input-group .icon{
+    margin-left: 13px;
+}
+.toggle-password{
+    left: 205px;
+}
+.register-bt{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.login-btn{
+    width: 90%;
+    padding: 7px;
+    margin-top: 15px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 40px;
+}
+
+.resister-p p{
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+}
+.resister-p button{
+    font-size: 1rem;
+    margin-bottom: 6px;
+}
+.login-container{
+    width: 47vw;
+}
+.login-toggle{
+    left: 183px;
+}
+.form-actions button{
+    font-size: 0.9rem;
+}
+.hamburger{
+    font-size: 1.5rem;
+}
+}  
+@media (max-width: 390px){
+.reg-container{
+    height: 62vh;
+    width: 63vw;
+}
+.login-container{
+    width: 55vw;
+    height: 50vh;
+}
+.toggle-password{
+    left: 195px;
+}
+.login-toggle{
+    left: 173px;
+}
+.secret-h h2{
+    font-size: 1.4rem;
+}
+.hamburger{
+    font-size: 1.3rem;
+}
+}
+
+/* contact us */
+.contact-container{
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fdfdfd;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+    background-color: transparent;
+}
+.contact-container:hover{
+    border:2px solid black;
+}
+
+.contact-container h2{
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.contact-info{
+    margin-bottom: 25px;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: 1px solid black;
+}
+
+.contact-form button {
+    background-color: #333;
+    color: #fff;
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #555;
+}
+
+
+@media screen and (max-width: 768px) {
+  .contact-container {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .contact-info p {
+    font-size: 0.95rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contact-container {
+    padding: 15px;
+  }
+
+  .contact-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.95rem;
+  }
+
+  .contact-form button {
+    font-size: 0.95rem;
+  }
+}
+
+/* About section */
+.about-container{
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+    background-color: transparent;
+}
+.about-container:hover{
+    border: 2px solid black;
+}
+
+.about-container h2{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.about-description{
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: center;
+    margin-bottom: 30px;
+    background-color: transparent;
+}
+
+.about-highlights{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.highlight{
+    flex: 1 1 45%;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    background-color: transparent;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border: 1px solid black;
+}
+
+.highlight h3{
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.team{
+    text-align: center;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: transparent;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border: 1px solid black;
+}
+
+.team h3{
+    margin-bottom: 10px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .about-container{
+       height: 70vh;
+    }
+  .about-highlights{
+    flex-direction: column;
+  }
+
+  .highlight{
+    flex: 1 1 100%;
+  }
+
+  .about-container{
+    margin: 20px;
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about-container h2{
+    font-size: 1.6rem;
+  }
+
+  .about-description{
+    font-size: 1rem;
+  }
+
+  .highlight h3,
+  .team h3 {
+    font-size: 1.1rem;
+  }
+}
+
+/* submit secret section */
+.form-group {
+    display: flex;
+    justify-content: center;
+}
+.form-group input {
+    width: 20vw;
+    padding: 10px;
+    background-color: transparent;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+.jumbotron button{
+    margin-left: 130px;
+    margin-top: 55px;
+    padding: 8px;
+    font-size: 1.1rem;
+    width: 8vw;
+    border-radius: 10px;
+    background-color: #5f7e6e;
+}
+.lock-key i {
+    display: flex;
+    justify-content: center;
+    font-size: 4rem;
+    margin-top: 12px;
+    overflow: hidden;
+}
+.lock-key p {
+    margin-left: 30px;
+}
+
+@media (max-width: 1024px) {
+    .submit-container{
+        width: 30vw;
+    }
+    .form-group input {
+        width: 25vw;
+    }
+
+    .jumbotron button {
+        width: 20vw;
+        margin-left: 0;
+        display: block;
+        margin: 35px auto;
+    }
+
+    .lock-key i {
+        font-size: 3rem;
+    }
+
+    .lock-key p {
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .submit-container{
+        width: 35vw;
+        height: 55vh;
+    }
+    .form-group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-group input {
+        width: 32vw;
+    }
+
+    .jumbotron button {
+        width: 28vw;
+        font-size: 1rem;
+        padding: 10px;
+        margin-left: 10;
+        margin-top: 30px;
+    }
+
+    .lock-key i {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+
+    .lock-key p {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .lock-key h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .secret-text {
+        text-align: center;
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 480px){
+    .submit-container{
+        width: 44vw;
+        height: 50vh;
+    }
+     .form-group input {
+        width: 30vw;
+        padding: 7px;
+    }
+    .jumbotron button{
+        font-size: 1rem;
+        padding: 5px;
+        width: 21vw;
+    }
+}
+
+@media (max-width: 390px){
+    .submit-container{
+        width: 54vw;
+        height: 50vh;
+    }
+     .form-group input {
+        width: 30vw;
+        padding: 7px;
+    }
+    .jumbotron button{
+        font-size: 1rem;
+        padding: 5px;
+        width: 21vw;
+    }
+}
+.footer-section{
+    width: 100vw;
+    margin-top: 1000px;
+    position: absolute;
+    
+}
+.footer{
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #5f7e6e;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1rem;
+    z-index: 1000;
+    height: 21vh;
+}  
+
+.footer .row{
+    margin-left: 60px;
+    text-align: left;
+    float: left;
+}
+
+.footer h5{
+   margin-bottom: 10px;
+   font-size: 1.3rem;
+}
+
+.footer p{
+   font-size: 1.05rem;
+   margin: 5px 0;
+}
+.row p:hover{
+    text-decoration: underline;
+}
+
+.footer .contents p{
+   font-size: 1.2rem;
+   color: #f1f1f1;
+}
+.contents{
+    margin-top: 60px;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 768px){
+    .footer {
+        padding: 1rem;
+        height: auto;
+        text-align: center;
+    }
+
+    .footer .row{
+        margin-left: 0;
+        float: none;
+        text-align: center;
+    }
+
+    .footer h5{
+        font-size: 1.1rem;
+    }
+
+    .footer p,
+    .footer .contents p{
+        font-size: 0.9rem;
+    }
+
+    .contents{
+        margin-top: 20px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px){
+    .footer h5 {
+        font-size: 1rem;
+    }
+
+    .footer p,
+    .footer .contents p{
+        font-size: 0.85rem;
+    }
+
+    .contents{
+        margin-top: 15px;
+        font-size: 1rem;
+    }
+}
+
+.reset-container{
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    background-color: transparent;
+}
+.reset-container:hover{
+    border: 1px solid black;
+}
+
+.reset-container input[type="password"],
+.reset-container button{
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.reset-container button{
+    background-color: #5f7e6e;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.reset-container button:hover {
+    background-color: #99c1b6;
+}
+@media (max-width: 768px){
+    .reset-container {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px){
+    .reset-container {
+        padding: 10px;
+        margin: 20px auto;
+    }
+
+    .reset-container input,
+    .reset-container button{
+        font-size: 0.95rem;
+    }
+}
