@@ -1,0 +1,30 @@
+<%- include('partials/header') %>
+<div class="container login-container">
+  <h1>Login</h1>
+  <form action="/login" method="POST" id="login-form">
+    
+    <div class="input-group input-grp">
+      <i class="fa-solid fa-envelope icon icons"></i>
+      <input type="email" name="username" placeholder="Email" id="login-email" required>
+    </div>
+
+    <div class="input-group input-grp">
+      <i class="fa-solid fa-lock icon icons"></i>
+      <input type="password" name="password" placeholder="Password" id="login-password" required>
+      <i class="fa-solid fa-eye toggle-password login-toggle" id="toggleLoginPassword"></i>
+    </div>
+
+    <div class="form-actions">
+      <button type="button" class="forget-pass login-forget" onclick="window.location.href='/forget'">Forget Password?</button>
+      <button type="submit" class="login-btn" id="login-submit">Login</button>
+    </div>
+  </form>
+
+  <div class="resister-p">
+    <p>Don't have an account? 
+      <button class="regi-btn" onclick="window.location.href='/register'">Register</button>
+    </p>
+  </div>
+</div>
+<%- include('partials/footer') %>
+

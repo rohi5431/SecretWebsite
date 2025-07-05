@@ -1,0 +1,39 @@
+<%- include('partials/header') %>
+<div class="container reg-container">
+  <h1>Sign-Up</h1>
+  <form action="/register" method="POST" id="register-form">
+    
+    <div class="input-group input-gp">
+      <i class="fa-solid fa-user icon"></i>
+      <input type="text" name="name" placeholder="Name" id="reg-name" required>
+    </div>
+
+    <div class="input-group input-gp">
+      <i class="fa-solid fa-envelope icon icons"></i>
+      <input type="email" name="username" placeholder="Email" id="reg-email" required>
+    </div>
+ 
+    <div class="input-group input-gp">
+      <i class="fa-solid fa-lock icon icons"></i>
+      <input type="password" name="password" id="reg-password" placeholder="Password" required>
+      <i class="fa-solid fa-eye toggle-password reg-toggle" id="togglePassword"></i>
+    </div>
+
+    <div class="input-group input-gp">
+      <i class="fa-solid fa-lock icon"></i>
+      <input type="password" name="confirmPassword" id="reg-confirm-password" placeholder="Confirm Password" required>
+      <i class="fa-solid fa-eye toggle-password reg-toggle" id="toggleConfirmPassword"></i>
+    </div>
+    <div class="register-bt">
+       <button type="submit" id="register-submit" class="login-btn input-gp">Register</button>
+    </div>
+  </form>
+
+  <div class="resister-p">
+    <p>Already have an account? 
+      <button class="regi-btn" onclick="window.location.href='/login'">Login</button>
+    </p>
+  </div>
+</div>
+<%- include('partials/footer') %>
+

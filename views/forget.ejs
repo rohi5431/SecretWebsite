@@ -1,0 +1,17 @@
+<%- include('partials/header') %>
+<div class="container">
+  <h1>Forgot Password</h1>
+  <form action="/forget" method="POST">
+    <div class="input-group">
+      <i class="fa-solid fa-envelope icon"></i>
+      <input type="email" name="username" placeholder="Enter your email" required>
+    </div>
+    <button type="submit" class="login-btn">Send Reset Link</button>
+  </form>
+  <div class="resister-p">
+    <p>Remember your password?
+      <button class="regi-btn" onclick="window.location.href='/login'">Login</button>
+    </p>
+  </div>
+</div>
+<%- include('partials/footer') %>
