@@ -1,3 +1,7 @@
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+    transition: background-color 5000s ease-in-out 0s;
+}
 *{
     margin: 0;
     padding: 0;
@@ -6,6 +10,7 @@
 html{
     width: 100vw;
     height: 100vh;
+    overflow-x: hidden;
 }
 body{
     height: 100vh;
@@ -69,6 +74,8 @@ body{
     border: 1px solid #aaa;
     box-sizing: border-box;
     font-size: 1rem;
+    background-color: transparent;
+    border: 1px solid black;
 }
 .forget-pass{
     margin-left: 32px;
@@ -78,22 +85,22 @@ body{
     font-size: 1.03rem;
 }
 .login-button{
-   background: none;
-   border: none;
-   font-size: 1.3rem;
-   color: white;
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    color: white;
 }
 .login-button:hover{
     text-decoration: underline;
 }
 .login-btn{
-   margin-left: 32px;
-   width: 20vw;
-   margin-top: 18px;
-   padding: 8px;
-   font-size: 1.2rem;
-   border-radius: 10px;
-   background-color: #789686;
+    margin-left: 32px;
+    width: 20vw;
+    margin-top: 18px;
+    padding: 8px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    background-color: #789686;
 }
 .login-btn:hover{
     background-color: #99c1b6;
@@ -123,6 +130,7 @@ body{
     width: 100%; 
     /* border: 1px solid black; */
     border-bottom: 1px solid black;
+    overflow-x: hidden;
 }
 .nav-items a{
     text-decoration: none;
@@ -212,13 +220,13 @@ body{
     margin: 17px;
     font-size: 1.2rem;
 }
-.secret-btn {
+.secret-btn{
     display: flex;
     justify-content: center;
     gap: 20px; 
 }
 
-.secret-btn a {
+.secret-btn a{
     font-size: 1.1rem;
     padding: 8px 16px;
     color: black;
@@ -227,454 +235,356 @@ body{
     text-decoration: none;
 }
 
-.secret-btn a:hover {
+.secret-btn a:hover{
     background-color: #5f7e6e;
 }
 
-.hamburger {
+.hamburger{
     display: none;
     font-size: 2rem;
     cursor: pointer;
     margin-right: 20px;
 }
 .login-toggle{
-    left: 277px;
-}
-@media (max-width: 1108px){
-.secret-img{
-    margin-right: 80px;
-    height: 300px;
-    width: 300px;
-}
-.box{
-    height: 30vh;
-}
-.box h1{
-    font-size: 1.5rem;
-}
-.box p{
-    font-size: 1rem;
-}
-.register-btn button{
-    font-size: 1.1rem;
-}
-.reg-container{
-    width: 29vw;
-    height: 66vh;
-    margin-top: 5vh;
-}
-.reg-container h1{
-    margin-top: 20px;
-    font-size: 1.5rem;
-}
-.input-group input{
-    padding: 9px 9px 9px 31px;
-    font-size: 0.9rem;
-    width: 20vw;
-}
-.login-btn{
-    padding: 8px;
-    font-size: 1rem;
-}
-.resister-p p{
-    font-size: 1rem;
-}
-.resister-p button{
-    font-size: 1.1rem;
-}
-.resister-p p{
-    font-size: 1rem;
-    margin-bottom: 6px;
-}
-.resister-p button{
-    font-size: 1rem;
-    margin-bottom: 6px;
-}
-.reg-toggle{
-    left: 190px;
-}
-}
-
-/* Tablets and below */
-@media (max-width: 1024px){
-.hamburger{
-    display: block;
-}
-
-.nav-items{
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 12vh;
-    right: 0;
-    background-color: #789686;
-    width: 100%;
-    padding: 20px;
-    z-index: 99;
-}
-
-.nav-items a{
-    margin: 10px 0;
-    color: white;
-    font-size: 1.2rem;
-  }
-
-.nav-items.show{
-    display: flex;
-  }
-.secret-img{
-    margin-right: 80px;
-    height: 287px;
-    width: 287px;
-}
-.box{
-    height: 30vh;
-}
-.box h1{
-    font-size: 1.5rem;
-}
-.box p{
-    font-size: 1rem;
-}
-.register-btn button{
-    font-size: 1.1rem;
-}
-.reg-container{
-    height: 63vh;
-}
-.reg-container h1{
-    font-size: 1.4rem;
-    margin-top: 8px;
-}
-.input-group input{
-    font-size: 0.8rem;
-}
-.login-btn{
-    padding: 6px;
-}
-.resister-p p{
-    font-size: 1rem;
-    margin-bottom: 6px;
-}
-.resister-p button{
-    font-size: 1rem;
-    margin-bottom: 6px;
-}
-.login-container{
-    width: 27vw;
-    height: 55vh;
-}
-}
-
-@media (max-width: 768px){
-.secret-img{
-    margin-right: 40px;
-    height: 240px;
-    width: 240px;
-}
-.box{
-    height: 30vh;
-}
-.box h1{
-    font-size: 1.3rem;
-}
-.box p{
-    display: flex;
-    justify-content: center;
-    font-size: 0.9rem;
-}
-.register-btn button{
-    font-size: 1rem;
-    padding: 3px;
-}
-.reg-container{
-    height: 64vh;
-    width: 36vw;
-}
-.container h1{
-    font-size: 1.4rem;
-    margin-top: 8px;
-}
-.input-group{
-    width: 100%;
-    margin: 20px 0;
-    position: relative;
-}
-.input-group input {
-    width: 80%;
-    padding: 8px 8px 8px 28px;
-    box-sizing: border-box;
-    border-radius: 10px;
-    font-size: 0.9rem;
-    margin-left: 25px;
-}
-.input-grp{
-    width: 100%;
-    margin: 20px 0;
-    position: relative;
-}
-.input-grp input{
-    width: 85%;
-    padding: 8px 8px 8px 31px;
-    box-sizing: border-box;
-    border-radius: 10px;
-    font-size: 0.9rem;
-    margin-left: 21px;
-}
-
-.login-container{
-    width: 35vw;
-}
-.form-actions button{
-    margin-left: 15px;
-    font-size: 1rem;
- }
-.input-group .icon{
-    margin-left: 22px;
-}
-.toggle-password{
     left: 220px;
 }
-.register-bt{
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-.login-btn{
-    width: 90%;
-    padding: 7px;
-    margin-top: 15px;
-    font-size: 1.1rem;
-    border-radius: 10px;
-    cursor: pointer;
-    margin-right: 40px;
-}
 
-.resister-p p{
-    font-size: 1rem;
-    margin-bottom: 6px;
+/* register-section */
+@media screen and (max-width: 1250px){
+    .container{
+        width: 350px;
+        margin-top: 50px;
+        padding: 25px;
+        height: 460px;
+    }
+    .container h1{
+        text-align: center;
+        margin-bottom: 15px;
+        margin-top: 2px;
+        font-size: 1.8rem;
+    }
+    .input-group{
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 2px;
+        margin-bottom: 15px;
+        border-radius: 10px;
+        border: 1px solid black;
+        width: 90%;
+        margin-left: 12px;
+        background: none;
+    } 
+    .input-group i.fa-user,
+    .input-group i.fa-envelope,
+    .input-group i.fa-lock{
+        margin-right: 10px;
+        font-size: 1.2rem;
+        color: #5f7e6e;
+    }
+    .input-group input{
+        border: none;
+        outline: none;
+        width: 90%;
+        font-size: 1rem;
+        background-color: transparent !important;
+        color: #5f7e6e;
+    }
+    .toggle-password{
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        color: #5f7e6e;
+        font-size: 1.1rem;
+        z-index: 10;
+    }
+    .reg-toggle{
+        left: 240px;
+    }
+    .register-bt{
+        margin-right: 50px;
+    }
+    .register-bt button{
+        margin-top: 10px;
+        width: 90%;
+    }
+    .resister-p{
+        margin-top: 15px;
+    }
 }
-.resister-p button{
-    font-size: 1rem;
-    margin-bottom: 6px;
-}
-.hamburger{
-    font-size: 1.7rem;
-}
-}
+@media screen and (max-width: 768px){
+    .container{
+        width: 300px;
+    }
+    .reg-toggle{
+        left: 195px;
+    }
+    .container h1{
+        margin-bottom: 20px;
+    }
+    .hamburger{
+        display: block;
+    }
 
-@media (max-width: 590px){
-.secret-img{
-    margin-right: 15px;
-    height: 200px;
-    width: 200px;
-}
-.box{
-    height: 30vh;
-}
-.box h1{
-    font-size: 1.3rem;
-}
-.box p{
-    display: flex;
-    justify-content: center;
-    font-size: 0.8rem;
-}
-.register-btn button{
-    font-size: 1rem;
-    padding: 3px;
-}
-.reg-container{
-    height: 64vh;
-    width: 50vw;
-}
-.container h1{
-    font-size: 1.4rem;
-    margin-top: 8px;
-}
-.input-group{
-    width: 100%;
-    margin: 20px 0;
-    position: relative;
-}
-.input-group input {
-    width: 85%;
-    padding: 8px 8px 8px 31px;
-    box-sizing: border-box;
-    border-radius: 10px;
-    font-size: 0.9rem;
-    margin-left: 17px;
-}
-.input-group .icon{
-    margin-left: 13px;
-}
-.toggle-password{
-    left: 235px;
-}
-.register-bt{
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-.login-btn{
-    width: 90%;
-    padding: 7px;
-    margin-top: 15px;
-    font-size: 1.1rem;
-    border-radius: 10px;
-    cursor: pointer;
-    margin-right: 40px;
-}
+   .nav-items{
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+        gap: 10px;
+        border-radius: 8px;
+        z-index: 1000;
+        background-color: #5f7e6e;
+        width: 84px;
+    }
+    .nav-items a:hover{
+        text-decoration: underline;
+    }
+    .nav-items a{
+        color: black;
+    }
 
-.resister-p p{
-    font-size: 1rem;
-    margin-bottom: 6px;
+    .nav-items.show{
+        display: flex;
+    }
+
+    .nav-items a,
+    .nav-items .login-button{
+        width: 100%;
+        text-align: left;
+    }
 }
-.resister-p button{
-    font-size: 1rem;
-    margin-bottom: 6px;
+@media screen and (max-width: 480px){
+    .container{
+        width: 260px;
+        padding: 5px;
+        height: auto;
+    }
+    .container h1{
+        font-size: 1.3rem;
+    }
+    .input-group{
+        width: 230px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .input-group input{
+        padding: 3px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 30px;
+    }
+    .register-bt p{
+        font-size: 0.9rem;
+    }
+    .register-bt button{
+        font-size: 0.9rem;
+        padding: 6px;
+    }
+    .secret-h h2{
+        font-size: 1.5rem;
+    }
+    .hamburger{
+        font-size: 1.5rem;
+    }
+    .secret-container{
+        margin-top: 130px;
+    }
 }
+    
+ /* login section media query */
 .login-container{
-    width: 40vw;
-    height: 52vh;
-}
-.login-toggle{
-    left: 190px;
-}
-.secret-h h2{
-    font-size: 1.5rem;
-}
-.hamburger{
-    font-size: 1.6rem;
-}
+    max-width: 500px;
+    margin: 60px auto;
+    padding: 33px;
+    background-color: transparent;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid black;
+    height: 410px;
 }
 
-@media (max-width: 480px) {
-  .secret-img {
-    width: 180px;
-    height: 180px;
-  }
-
-  .container h1,
-  .box h1 {
-    font-size: 1.2rem;
-  }
-
-  .secret-text {
-    font-size: 0.9rem;
-  }
-
-  .header-sec {
-    font-size: 1rem;
-  }
-
-  .nav-items a {
-    font-size: 1rem;
-    margin-right: 20px;
-  }
-
-  .secret-btn {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .secret-btn a {
-    width: 80%;
+.login-container h1{
     text-align: center;
-  }
-  .box{
-    height: 38vh;
-  }
-  .secret-img{
-    margin-right: 5px;
-    height: 150px;
-    width: 150px;
-}
-.reg-container{
-    height: 62vh;
-    width: 54vw;
-}
-.container h1{
-    font-size: 1.4rem;
-    margin-top: 8px;
-}
-.input-group{
-    width: 100%;
-    margin: 20px 0;
-    position: relative;
-}
-.input-group input {
-    width: 85%;
-    padding: 8px 8px 8px 31px;
-    box-sizing: border-box;
-    border-radius: 10px;
-    font-size: 0.9rem;
-    margin-left: 17px;
-}
-.input-group .icon{
-    margin-left: 13px;
-}
-.toggle-password{
-    left: 205px;
-}
-.register-bt{
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-.login-btn{
-    width: 90%;
-    padding: 7px;
-    margin-top: 15px;
-    font-size: 1.1rem;
-    border-radius: 10px;
-    cursor: pointer;
-    margin-right: 40px;
+    margin-bottom: 25px;
+    font-size: 2rem;
+    color: #333;
 }
 
-.resister-p p{
-    font-size: 0.9rem;
-    margin-bottom: 6px;
+.login-input{
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    border: 1px solid black;
+    background: none;
 }
-.resister-p button{
+
+.login-input i.fa-envelope,
+.login-input i.fa-lock{
+    color: #5f7e6e;
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+.login-input input{
+    border: none;
+    outline: none;
+    width: 100%;
     font-size: 1rem;
-    margin-bottom: 6px;
+    background-color: transparent;
+    color: #5f7e6e;
 }
-.login-container{
-    width: 47vw;
-}
-.login-toggle{
-    left: 183px;
-}
-.form-actions button{
-    font-size: 0.9rem;
-}
-.hamburger{
-    font-size: 1.5rem;
-}
-}  
-@media (max-width: 390px){
-.reg-container{
-    height: 62vh;
-    width: 63vw;
-}
-.login-container{
-    width: 55vw;
-    height: 50vh;
-}
+
 .toggle-password{
-    left: 195px;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #5f7e6e;
+    font-size: 1.1rem;
+    z-index: 10;
 }
-.login-toggle{
-    left: 173px;
+
+.form-actions{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    gap: 10px;
 }
-.secret-h h2{
-    font-size: 1.4rem;
+
+.form-actions button{
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    background-color: #5f7e6e;
+    color: black;
+    transition: background-color 0.3s;
 }
-.hamburger{
-    font-size: 1.3rem;
+
+.form-actions button:first-child:hover{
+    background-color: #99c1b6;
 }
+
+.form-actions button:last-child:hover{
+    background-color: #99c1b6;
 }
+
+.login-para{
+    text-align: center;
+    margin-top: 32px;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.login-para button{
+    background: none;
+    border: none;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.login-para button:hover{
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 768px){
+    .login-container{
+        width: 80%;
+        padding: 15px;
+    }
+
+    .login-container h1{
+        font-size: 1.8rem;
+    }
+  
+    .form-actions{
+        flex-direction: column;
+        align-items: stretch;
+    }
+  
+    .form-actions button{
+        width: 100%;
+    }
+  
+    .form-actions button:first-child{
+        order: 1; 
+    }
+    .form-actions button:last-child{
+        order: 2;
+    }
+    .login-para{
+        font-size: 0.9rem;
+    }
+    .login-toggle{
+        left: 420px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .login-container {
+        padding: 5px;
+    }
+  
+    .login-container h1{
+        font-size: 1.5rem;
+    }
+  
+    .login-input{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    .login-input input{
+        padding: 2px;
+    }
+  
+    .login-input i.fa-envelope,
+    .login-input i.fa-lock{
+        margin-bottom: 5px;
+        font-size: 1rem;
+    }
+  
+    .toggle-password{
+        top: 35px;
+        right: 10px;
+    }
+  
+    .form-actions button{
+        font-size: 0.95rem;
+        padding: 10px;
+    }
+  
+    .login-para{
+        font-size: 0.85rem;
+    }
+  
+    .login-para button{
+        font-size: 0.9rem;
+    }
+    .login-toggle{
+        left: 340px;
+    }
+}
+@media screen and (max-width: 360px){
+    .login-toggle{
+        left: 240px;
+    }
+}
+
 
 /* contact us */
 .contact-container{
@@ -687,6 +597,7 @@ body{
     font-family: 'Segoe UI', sans-serif;
     color: #333;
     background-color: transparent;
+    margin-bottom: 1px;
 }
 .contact-container:hover{
     border:2px solid black;
@@ -738,33 +649,35 @@ body{
 
 
 @media screen and (max-width: 768px) {
-  .contact-container {
-    margin: 20px;
-    padding: 20px;
-  }
-
-  .contact-info p {
-    font-size: 0.95rem;
-  }
+    .contact-container {
+        margin: 20px;
+        padding: 20px;
+        margin-bottom: 1px;
+    }
+  
+    .contact-info p {
+        font-size: 0.95rem;
+    }
 }
 
 @media screen and (max-width: 480px) {
-  .contact-container {
-    padding: 15px;
-  }
-
-  .contact-container h2 {
-    font-size: 1.5rem;
-  }
-
-  .contact-form input,
-  .contact-form textarea {
-    font-size: 0.95rem;
-  }
-
-  .contact-form button {
-    font-size: 0.95rem;
-  }
+    .contact-container {
+        padding: 15px;
+        margin-bottom: 1px;
+    }
+  
+    .contact-container h2 {
+        font-size: 1.5rem;
+    }
+  
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 0.95rem;
+    }
+  
+    .contact-form button {
+        font-size: 0.95rem;
+    }
 }
 
 /* About section */
@@ -837,44 +750,154 @@ body{
 
 
 @media screen and (max-width: 768px) {
-  .about-container{
-       height: 70vh;
+    .about-container{
+        height: 70vh;
     }
-  .about-highlights{
-    flex-direction: column;
-  }
-
-  .highlight{
-    flex: 1 1 100%;
-  }
-
-  .about-container{
-    margin: 20px;
-    padding: 20px;
-  }
+    .about-highlights{
+        flex-direction: column;
+    }
+  
+    .highlight{
+        flex: 1 1 100%;
+    }
+  
+    .about-container{
+        margin: 20px;
+        padding: 20px;
+    }
 }
 
 @media screen and (max-width: 480px) {
-  .about-container h2{
-    font-size: 1.6rem;
-  }
-
-  .about-description{
-    font-size: 1rem;
-  }
-
-  .highlight h3,
-  .team h3 {
-    font-size: 1.1rem;
-  }
+    .about-container h2{
+        font-size: 1.6rem;
+    }
+  
+    .about-description{
+        font-size: 1rem;
+    }
+  
+    .highlight h3,
+    .team h3 {
+        font-size: 1.1rem;
+    }
 }
 
+@media screen and (max-width: 1245px){
+    .secret-img{
+        text-align: center;
+        margin-bottom: 20px;
+        margin-left: 70px;
+        width: 300px;
+        height: 300px;
+    }
+  
+    .box{
+        padding: 20px;
+        height: fit-content;
+        text-align: center;
+    }
+  
+    .box h1{
+        font-size: 1.8rem;
+    }
+  
+    .box p{
+        font-size: 1rem;
+        padding: 0 20px;
+    }
+  
+    .register-btn button{
+        font-size: 1rem;
+        padding: 12px 24px;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .secret-img{
+        margin-right: 80px;
+        margin-bottom: 60px;
+    }
+    .box{
+        margin-right: 30px;
+    }
+    .secret-img img.rotate-img{
+        width: 80%;
+        max-width: 400px;
+        transform: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+   .secret-img img.rotate-img{
+        width: 80%;
+        width: auto;
+        height: auto;
+        transform: none;
+    }
+    .box{
+        margin-right: 50px;
+        width: fit-content;
+        height: fit-content;
+    }
+    .box h1{
+        font-size: 1.6rem;
+    }
+  
+    .box p{
+        font-size: 1rem;
+    }
+  
+    .register-btn button{
+        padding: 8px 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body{
+        flex-direction: column;
+    }
+  
+    .secret-img{
+        order: 2;
+        height: auto;
+        width: auto;
+    }
+  
+    .box{
+        order: 1;
+        height: fit-content;
+        width: fit-content;
+        margin-top: 280px;
+        margin-left: 40px;
+    }
+  
+    .box h1{
+        font-size: 1.4rem;
+    }
+  
+    .box p{
+        font-size: 0.95rem;
+        padding: 0 10px;
+    }
+  
+    .register-btn button{
+        font-size: 0.95rem;
+        padding: 8px 16px;
+    }
+  
+    .secret-img img.rotate-img{
+        width: 90%;
+        height: auto;
+    }
+}
+
+
 /* submit secret section */
-.form-group {
+.form-group{
     display: flex;
     justify-content: center;
 }
-.form-group input {
+.form-group input{
     width: 20vw;
     padding: 10px;
     background-color: transparent;
@@ -890,56 +913,56 @@ body{
     border-radius: 10px;
     background-color: #5f7e6e;
 }
-.lock-key i {
+.lock-key i{
     display: flex;
     justify-content: center;
     font-size: 4rem;
     margin-top: 12px;
     overflow: hidden;
 }
-.lock-key p {
+.lock-key p{
     margin-left: 30px;
 }
 
-@media (max-width: 1024px) {
+
+@media (max-width: 1245px){
     .submit-container{
         width: 30vw;
     }
-    .form-group input {
+    .form-group input{
         width: 25vw;
     }
 
-    .jumbotron button {
+    .jumbotron button{
         width: 20vw;
         margin-left: 0;
         display: block;
         margin: 35px auto;
     }
-
-    .lock-key i {
+    .lock-key i{
         font-size: 3rem;
     }
 
-    .lock-key p {
+    .lock-key p{
         margin-left: 10px;
     }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px){
     .submit-container{
         width: 35vw;
         height: 55vh;
     }
-    .form-group {
+    .form-group{
         flex-direction: column;
         align-items: center;
     }
 
-    .form-group input {
+    .form-group input{
         width: 32vw;
     }
 
-    .jumbotron button {
+    .jumbotron button{
         width: 28vw;
         font-size: 1rem;
         padding: 10px;
@@ -947,34 +970,34 @@ body{
         margin-top: 30px;
     }
 
-    .lock-key i {
+    .lock-key i{
         font-size: 2.5rem;
         margin-bottom: 10px;
     }
 
-    .lock-key p {
+    .lock-key p{
         margin-left: 0;
         text-align: center;
     }
 
-    .lock-key h1 {
+    .lock-key h1{
         font-size: 2rem;
         text-align: center;
     }
 
-    .secret-text {
+    .secret-text{
         text-align: center;
         font-size: 1rem;
         padding: 0 10px;
     }
 }
 
-@media (max-width: 480px){
+@media screen and (max-width: 480px){
     .submit-container{
         width: 44vw;
         height: 50vh;
     }
-     .form-group input {
+     .form-group input{
         width: 30vw;
         padding: 7px;
     }
@@ -985,7 +1008,7 @@ body{
     }
 }
 
-@media (max-width: 390px){
+@media screen and (max-width: 390px){
     .submit-container{
         width: 54vw;
         height: 50vh;
@@ -1000,16 +1023,17 @@ body{
         width: 21vw;
     }
 }
+
 .footer-section{
     width: 100vw;
     margin-top: 1000px;
     position: absolute;
-    
+
 }
 .footer{
     bottom: 0;
     left: 0;
-    width: 100%;
+    width: auto;
     background-color: #5f7e6e;
     color: white;
     text-align: center;
@@ -1017,6 +1041,7 @@ body{
     font-size: 1rem;
     z-index: 1000;
     height: 21vh;
+    overflow-x: hidden;
 }  
 
 .footer .row{
@@ -1026,29 +1051,29 @@ body{
 }
 
 .footer h5{
-   margin-bottom: 10px;
-   font-size: 1.3rem;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
 }
 
 .footer p{
-   font-size: 1.05rem;
-   margin: 5px 0;
+    font-size: 1.05rem;
+    margin: 5px 0;
 }
 .row p:hover{
     text-decoration: underline;
 }
 
 .footer .contents p{
-   font-size: 1.2rem;
-   color: #f1f1f1;
+    font-size: 1.2rem;
+    color: #f1f1f1;
 }
 .contents{
     margin-top: 60px;
     font-size: 1.5rem;
 }
 
-@media (max-width: 768px){
-    .footer {
+@media screen and (max-width: 768px){
+    .footer{
         padding: 1rem;
         height: auto;
         text-align: center;
@@ -1075,7 +1100,7 @@ body{
     }
 }
 
-@media (max-width: 480px){
+@media screen and (max-width: 480px){
     .footer h5 {
         font-size: 1rem;
     }
@@ -1090,6 +1115,7 @@ body{
         font-size: 1rem;
     }
 }
+
 
 .reset-container{
     max-width: 600px;
@@ -1125,13 +1151,13 @@ body{
 .reset-container button:hover {
     background-color: #99c1b6;
 }
-@media (max-width: 768px){
+@media screen and (max-width: 768px){
     .reset-container {
         padding: 15px;
     }
 }
 
-@media (max-width: 480px){
+@media screen and (max-width: 480px){
     .reset-container {
         padding: 10px;
         margin: 20px auto;
@@ -1140,5 +1166,154 @@ body{
     .reset-container input,
     .reset-container button{
         font-size: 0.95rem;
+    }
+}
+
+/* forget section media query */
+
+.forget-container{
+    max-width: 500px;
+    max-width: 500px;
+    margin: 60px auto;
+    margin: 60px auto;
+    padding: 30px;
+    padding: 30px;
+    background-color: #fff;
+    background-color: #fff;
+    border-radius: 12px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    background-color: transparent;
+}
+.forget-container:hover{
+    border: 1px solid black;
+}
+
+.forget-container h1{
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2rem;
+    color: #333;
+}
+
+.forget-input{
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f7f7f7;
+    margin-bottom: 20px;
+}
+
+.forget-input i {
+    margin-right: 10px;
+    color: #666;
+    font-size: 1.2rem;
+}
+
+.forget-input input{
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 1rem;
+    background: transparent;
+    color: #5f7e6e;
+}
+
+.forget-container button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #5f7e6e;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.forget-container button[type="submit"]:hover {
+    background-color: #5f7e6e;
+}
+
+.resister-text {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.resister-text button{
+    margin-left: 6px;
+    background: none;
+    border: none;
+    color: black;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.resister-text button:hover{
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 768px){
+    .forget-container{
+       width: 90%;
+       padding: 25px;
+    }
+  
+    .forget-input{
+       padding: 10px;
+    }
+  
+    .forget-container h1{
+       font-size: 1.7rem;
+    }
+  
+    .forget-container button[type="submit"]{
+       font-size: 0.95rem;
+    }
+  
+    .resister-text{
+       font-size: 0.85rem;
+    }
+  
+    .resister-text button{
+       font-size: 0.95rem;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .forget-container{
+        padding: 20px;
+    }
+  
+    .forget-input{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+  
+    .forget-input i{
+        font-size: 1rem;
+    }
+  
+    .forget-container h1{
+        font-size: 1.5rem;
+    }
+  
+    .forget-container button[type="submit"]{
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+  
+    .resister-text{
+        font-size: 0.8rem;
+    }
+  
+    .resister-text button{
+        font-size: 0.9rem;
     }
 }

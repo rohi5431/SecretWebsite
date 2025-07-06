@@ -1,16 +1,16 @@
 <%- include('partials/header') %>
-<div class="container">
+<div class="forget-container">
   <h1>Forgot Password</h1>
   <form action="/forget" method="POST">
-    <div class="input-group">
-      <i class="fa-solid fa-envelope icon"></i>
+    <div class="forget-input">
+      <i class="fa-solid fa-envelope"></i>
       <input type="email" name="username" placeholder="Enter your email" required>
     </div>
-    <button type="submit" class="login-btn">Send Reset Link</button>
+    <button type="submit">Send Reset Link</button>
   </form>
-  <div class="resister-p">
+  <div class="resister-text">
     <p>Remember your password?
-      <button class="regi-btn" onclick="window.location.href='/login'">Login</button>
+      <button  onclick="window.location.href='/login'">Login</button>
     </p>
   </div>
 </div>
