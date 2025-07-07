@@ -11,6 +11,7 @@ html{
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 body{
     height: 100vh;
@@ -118,7 +119,7 @@ body{
     background: none;
     border: none;
 }
-.header-sec {
+.header-sec{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -131,6 +132,7 @@ body{
     /* border: 1px solid black; */
     border-bottom: 1px solid black;
     overflow-x: hidden;
+    overflow: visible;
 }
 .nav-items a{
     text-decoration: none;
@@ -167,6 +169,8 @@ body{
 .box{
     height: 30vh;
     width: 35vw;
+    border-radius: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 .box h1{
     display: flex;
@@ -178,6 +182,7 @@ body{
     justify-content: center;
     margin-top: 15px;
     font-size: 1.1rem;
+    margin-left: 10px;
 }
 .register-btn{
     display: flex;
@@ -199,9 +204,9 @@ body{
     width: 35vw;
     height: 65vh;
 }
-.container .icons{
+/* .container .icons{
     width: 16vh;
-}
+} */
 .secret-container a{
     text-decoration: none;
     border: 1px solid black;
@@ -338,15 +343,18 @@ body{
         padding: 15px;
         gap: 10px;
         border-radius: 8px;
-        z-index: 1000;
-        background-color: #5f7e6e;
+        z-index: 999;
+        /* background-color: #5f7e6e; */
         width: 84px;
+        background: transparent;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     }
     .nav-items a:hover{
         text-decoration: underline;
     }
     .nav-items a{
         color: black;
+        border-bottom: 1px solid black;
     }
 
     .nav-items.show{

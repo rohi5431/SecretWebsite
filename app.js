@@ -1,23 +1,20 @@
+require("dotenv").config();
 const express = require('express')
 const bodyParser = require('body-parser')
+const mongoose = require('mongoose')
 const ejs = require('ejs')
-const app = express()
-const mongoose = require('mongoose');
-
-const bcrypt = require('bcrypt');
-
+const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 const cookieParser = require("cookie-parser");
 const nodemailer = require("nodemailer")
 
-require('dotenv').config();
 
-
-app.use(cookieParser());
+const app = express()
 app.set('view engine',"ejs")
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(cookieParser());
 
 mongoose.connect("mongodb://localhost:27017/secrets", {
   useNewUrlParser: true,
@@ -32,8 +29,24 @@ const secretSchema = new mongoose.Schema({
     secret: String,
 })
 
-
 const User = mongoose.model("User", secretSchema);
+
+function authenticationjwtToken(req,res,next){
+    const tokens = req.cookies.authToken
+ 
+    if(!tokens){
+      return res.redirect("/login")
+    }
+    try{
+       const decodes = jwt.verify(tokens,process.env.JWT_SECRET)
+       req.userId = decodes.userId
+       next();
+    }
+    catch(err){
+       console.error("jwt verification will be failed",err);
+       return res.redirect("/login")
+    }
+}
 
 app.get("/",function(req,res){
     res.render("home")
@@ -42,30 +55,6 @@ app.get("/",function(req,res){
 app.get("/register", function(req, res){
     res.render("register");
 });
-
-app.get("/login", function(req, res){
-   res.render("login");
-});
-app.get("/forget", function(req, res){
-    res.render("forget");
-});
-
-app.get("/about",function(req,res){
-    res.render("about")
-});
-app.get("/contact",function(req,res){
-    res.render("contact")
-});
-app.get("/logout",function(req,res){
-    res.clearCookie("sessionToken");
-    res.redirect("/login");
-});
-
-app.get("/secret", authenticationJWT, async function(req, res){
-    const userSecretInfo = await User.findById(req.userId).select("name email secret");
-    res.render("secret", { userSecretInfo });
-});
-
 app.post("/register", async function(req,res){
     try{
         const securePass = await bcrypt.hash(req.body.password, 10);
@@ -82,6 +71,10 @@ app.post("/register", async function(req,res){
         console.log("try again!")
     }
 })
+
+app.get("/login", function(req, res){
+   res.render("login");
+});
 
 app.post("/login", async function(req, res){
   try{
@@ -101,12 +94,13 @@ app.post("/login", async function(req, res){
             return res.status(401).send("Invalid Username");
         }
   
-        console.log("Found user password in DB:", userFound.password);
+        console.log("AC user password in DB:", userFound.password);
   
         const match = await bcrypt.compare(pass, userFound.password);
         if(match){
-           const sessionToken = jwt.sign({ userId: userFound._id }, "AuthSecretKey", { expiresIn: "1h" });
-           res.cookie("sessionToken", sessionToken, {
+           const tokenPayload = { userId: userFound._id}
+           const authToken = jwt.sign(tokenPayload,process.env.JWT_SECRET, {expiresIn : "1h"})
+           res.cookie("authToken", authToken, {
            httpOnly: true,
            secure: false,
            sameSite: 'lax'
@@ -122,8 +116,31 @@ app.post("/login", async function(req, res){
     res.status(500).send("Server error");
   }
 });
+app.get("/logout",function(req,res){
+    res.clearCookie("authToken");
+    res.redirect("/login");
+});
 
-app.post("/submit", authenticationJWT, async function(req, res){
+app.get("/secret", authenticationjwtToken, async function(req, res){
+    const userSecretInfo = await User.findById(req.userId).select("name email secret");
+    res.render("secret", { userSecretInfo });
+});
+app.get("/submit", authenticationjwtToken, async function(req, res){
+    try{
+        const userData = await User.findById(req.userId).select("name");
+        if(!userData){
+            return res.redirect("/login");
+        }
+
+        res.render("submit", { userData });
+    } 
+    catch(err){
+        console.error("Submission error:", err);
+        res.status(500).send("Server Error");
+    }
+});
+
+app.post("/submit", authenticationjwtToken, async function(req, res){
     try{
         const userData = await User.findById(req.userId);
         if (!userData) return res.redirect("/login");
@@ -139,22 +156,9 @@ app.post("/submit", authenticationJWT, async function(req, res){
     }
 });
 
-app.get("/submit", authenticationJWT, async function(req, res){
-    try{
-        const userData = await User.findById(req.userId).select("name");
-        if(!userData){
-            return res.redirect("/login");
-        }
-
-        res.render("submit", { userData });
-    } 
-    catch(err){
-        console.error("Submission error:", err);
-        res.status(500).send("Server Error");
-    }
+app.get("/forget", function(req, res){
+    res.render("forget");
 });
-
-
 app.post("/forget", async function(req, res){
     const email = req.body.username;
     const resetUserPass = await User.findOne({ email });
@@ -198,7 +202,6 @@ app.get("/reset_password/:token", function(req, res){
     const resetToken = req.params.token;
     res.render("reset-password", { resetToken });
 });
-
 app.post("/reset_password/:token", async function(req, res){
     const resetToken = req.params.token;
     const updatePassword = req.body.newPassword;
@@ -219,23 +222,12 @@ app.post("/reset_password/:token", async function(req, res){
     }
 });
 
-
-function authenticationJWT(req,res,next){
-   const tokens = req.cookies.sessionToken
-
-   if(!tokens){
-     return res.redirect("/login")
-   }
-   try{
-      const decodes = jwt.verify(tokens,"AuthSecretKey")
-      req.userId = decodes.userId
-      next();
-   }
-   catch(err){
-      console.error("JWT verification will be failed",err);
-      return res.redirect("/login")
-   }
-}
+app.get("/about",function(req,res){
+    res.render("about")
+});
+app.get("/contact",function(req,res){
+    res.render("contact")
+});
 
 app.listen(5000, function(){
    console.log("Server Started at 5000")
