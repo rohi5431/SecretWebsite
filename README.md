@@ -46,6 +46,48 @@ GMAIL_USER=yourgmail@gmail.com
 GMAIL_PASS=your_gmail_app_password
 🔐 For Gmail password, use an App Password if you have 2FA enabled.
 
+🌐 Slide 1: Auth – Registration & Login
+
+| Method | Route       | Description                |
+|--------|-------------|----------------------------|
+| GET    | /register   | Show registration form     |
+| POST   | /register   | Register a new user        |
+| GET    | /login      | Show login form            |
+| POST   | /login      | Authenticate user & login  |
+| GET    | /logout     | Logout and clear cookie    |
+
+🔐 Slide 2: Protected – Secrets Area
+
+| Method | Route     | Description                        |
+|--------|-----------|------------------------------------|
+| GET    | /secret   | View submitted secrets (protected) |
+| GET    | /submit   | Form to submit a secret (protected)|
+| POST   | /submit   | Save new secret to database        |
+
+🔁 Slide 3: Password Reset Flow
+
+| Method | Route                      | Description                     |
+|--------|----------------------------|---------------------------------|
+| GET    | /forget                    | Request password reset          |
+| POST   | /forget                    | Send reset email                |
+| GET    | /reset_password/:token     | Show password reset form        |
+| POST   | /reset_password/:token     | Save new password after reset   |
+
+📄 Slide 4: Static Pages & Home
+
+| Method | Route      | Description      |
+|--------|------------|------------------|
+| GET    | /          | Home page        |
+| GET    | /about     | About page       |
+| GET    | /contact   | Contact page     |
+
+✅ Slide 5: Auth Summary (Optional)
+
+JWT Auth is used with:
+- Cookies (httpOnly)
+- Middleware protected routes
+- Token expiration: 1 hour
+
 ## Start MongoDB
 Make sure MongoDB is running locally on default port (27017).
 
@@ -53,6 +95,7 @@ Make sure MongoDB is running locally on default port (27017).
 node app.js
 
 Visit: http://localhost:5000
+
 
 
 
