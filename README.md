@@ -1,6 +1,11 @@
 # 🔐 Secrets Web Application:
 A secure web application that allows users to register, log in, submit secrets, 
-and reset their passwords. Built using **Node.js**, **Express**, **MongoDB**, **EJS**, and **JWT**.
+and reset their passwords. Built using
+1. Node.js
+2. Express
+3. MongoDb
+4. EJS
+5. JWT
 
 ---
 Live server: https://secretwebsite-5.onrender.com
@@ -20,7 +25,7 @@ Live server: https://secretwebsite-5.onrender.com
 
 ## 📂 Project Structure
 ├── views/ # EJS templates (login, register, submit,about,contact,forget,home,resetPassword,secret etc.)
-├── public/ # Static assets (CSS, images, JS)
+├── public/ # (CSS, images, JS)
 ├── .env # Environment variables
 ├── app.js # Main server file
 ├── package.json
@@ -48,38 +53,43 @@ GMAIL_PASS=your_gmail_app_password
 
 🌐 Slide 1: Auth – Registration & Login
 
-| Method | Route       | Description                |
-|--------|-------------|----------------------------|
-| GET    | /register   | Show registration form     |
-| POST   | /register   | Register a new user        |
-| GET    | /login      | Show login form            |
-| POST   | /login      | Authenticate user & login  |
-| GET    | /logout     | Logout and clear cookie    |
+| Method | Route       | Purpose                          |
+|--------|-------------|----------------------------------|
+| GET    | /register   | Showing user Register Form       |
+| POST   | /register   | Create a new user account        |
+| GET    | /login      | Load the login interface         |
+| POST   | /login      | Validate credentials & issue JWT |
+| GET    | /logout     | Clear token and end user session |
+
 
 🔐 Slide 2: Protected – Secrets Area
 
-| Method | Route     | Description                        |
-|--------|-----------|------------------------------------|
-| GET    | /secret   | View submitted secrets (protected) |
-| GET    | /submit   | Form to submit a secret (protected)|
-| POST   | /submit   | Save new secret to database        |
+| Method | Route     | Purpose                                      |
+|--------|-----------|----------------------------------------------|
+| GET    | /secret   | Display secrets for the logged-in user       |
+| GET    | /submit   | Show form to add a new secret (requires auth)|
+| POST   | /submit   | Store the submitted secret in the database   |
+
 
 🔁 Slide 3: Password Reset Flow
 
-| Method | Route                      | Description                     |
-|--------|----------------------------|---------------------------------|
-| GET    | /forget                    | Request password reset          |
-| POST   | /forget                    | Send reset email                |
-| GET    | /reset_password/:token     | Show password reset form        |
-| POST   | /reset_password/:token     | Save new password after reset   |
+| Method | Route                      | Purpose                                      |
+|--------|----------------------------|----------------------------------------------|
+| GET    | /forget                    | Display form to initiate password reset      |
+| POST   | /forget                    | Email a reset link to the user               |
+| GET    | /reset_password            | Display the interface to set a new password  |
+| POST   | /reset_password            | Update the password                          |
+
+
 
 📄 Slide 4: Static Pages & Home
 
-| Method | Route      | Description      |
-|--------|------------|------------------|
-| GET    | /          | Home page        |
-| GET    | /about     | About page       |
-| GET    | /contact   | Contact page     |
+| Method | Route      | Purpose                        |
+|--------|------------|--------------------------------|
+| GET    | /          | Home Page                      |
+| GET    | /about     | Display the information of secret Website |
+| GET    | /contact   | Show contact details page      |
+
 
 ✅ Slide 5: Auth Summary (Optional)
 
@@ -89,7 +99,7 @@ JWT Auth is used with:
 - Token expiration: 1 hour
 
 ## Start MongoDB
-Make sure MongoDB is running locally on default port (27017).
+check for MongoDB is running locally on default port (27017).
 
 ## Run the App
 node app.js
