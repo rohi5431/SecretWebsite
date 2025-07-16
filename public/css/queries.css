@@ -1,0 +1,579 @@
+/* register-section */
+@media screen and (max-width: 1250px){
+    .container{
+        width: 350px;
+        margin-top: 50px;
+        padding: 25px;
+        height: 460px;
+    }
+    .container h1{
+        text-align: center;
+        margin-bottom: 15px;
+        margin-top: 2px;
+        font-size: 1.8rem;
+    }
+    .input-group{
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 2px;
+        margin-bottom: 15px;
+        border-radius: 10px;
+        border: 1px solid black;
+        width: 90%;
+        margin-left: 12px;
+        background: none;
+    } 
+    .input-group i.fa-user,
+    .input-group i.fa-envelope,
+    .input-group i.fa-lock{
+        margin-right: 10px;
+        font-size: 1.2rem;
+        color: #5f7e6e;
+    }
+    .input-group input{
+        border: none;
+        outline: none;
+        width: 90%;
+        font-size: 1rem;
+        background-color: transparent !important;
+        color: #5f7e6e;
+    }
+    .toggle-password{
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        color: #5f7e6e;
+        font-size: 1.1rem;
+        z-index: 15;
+    }
+    .reg-toggle{
+        left: 240px;
+    }
+    .register-bt{
+        margin-right: 50px;
+    }
+    .register-bt button{
+        margin-top: 10px;
+        width: 90%;
+    }
+    .resister-p{
+        margin-top: 15px;
+    }
+}
+
+@media screen and (max-width: 1245px){
+    .secret-img{
+        text-align: center;
+        margin-bottom: 20px;
+        margin-left: 70px;
+        width: 300px;
+        height: 300px;
+    }
+  
+    .box{
+        padding: 20px;
+        height: fit-content;
+        text-align: center;
+    }
+  
+    .box h1{
+        font-size: 1.8rem;
+    }
+  
+    .box p{
+        font-size: 1rem;
+        padding: 0 20px;
+    }
+  
+    .register-btn button{
+        font-size: 1rem;
+        padding: 12px 24px;
+    }
+     .submit-container{
+        width: 30vw;
+    }
+    .form-group input{
+        width: 25vw;
+    }
+
+    .jumbotron button{
+        width: 20vw;
+        margin-left: 0;
+        display: block;
+        margin: 35px auto;
+    }
+    .lock-key i{
+        font-size: 3rem;
+    }
+
+    .lock-key p{
+        margin-left: 10px;
+    }
+}
+@media screen and (max-width: 1024px){
+    .secret-img{
+        margin-right: 80px;
+        margin-bottom: 60px;
+    }
+    .box{
+        margin-right: 30px;
+    }
+    .secret-img img.rotate-img{
+        width: 80%;
+        max-width: 400px;
+        transform: none;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .container{
+        width: 300px;
+    }
+    .reg-toggle{
+        left: 195px;
+    }
+    .container h1{
+        margin-bottom: 20px;
+    }
+    .hamburger{
+        display: block;
+    }
+
+   .nav-items{
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+        gap: 10px;
+        border-radius: 8px;
+        z-index: 999;
+        /* background-color: #5f7e6e; */
+        width: 84px;
+        background: transparent;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+    .nav-items a:hover{
+        text-decoration: underline;
+    }
+    .nav-items a{
+        color: black;
+        border-bottom: 1px solid black;
+    }
+
+    .nav-items.show{
+        display: flex;
+    }
+
+    .nav-items a,
+    .nav-items .login-button{
+        width: 100%;
+        text-align: left;
+    }
+     .login-container{
+        width: 80%;
+        padding: 15px;
+    }
+
+    .login-container h1{
+        font-size: 1.8rem;
+    }
+  
+    .form-actions{
+        flex-direction: column;
+        align-items: stretch;
+    }
+  
+    .form-actions button{
+        width: 100%;
+    }
+  
+    .form-actions button:first-child{
+        order: 1; 
+    }
+    .form-actions button:last-child{
+        order: 2;
+    }
+    .login-para{
+        font-size: 0.9rem;
+    }
+    .login-toggle{
+        left: 420px;
+    }
+    .contact-container{
+        margin: 20px;
+        padding: 20px;
+        margin-bottom: 1px;
+    }
+  
+    .contact-info p{
+        font-size: 0.95rem;
+    }
+     .about-container{
+        height: 70vh;
+    }
+    .about-highlights{
+        flex-direction: column;
+    }
+  
+    .highlight{
+        flex: 1 1 100%;
+    }
+  
+    .about-container{
+        margin: 20px;
+        padding: 20px;
+    }
+    .secret-img img.rotate-img{
+        width: 80%;
+        width: auto;
+        height: auto;
+        transform: none;
+    }
+    .box{
+        margin-right: 50px;
+        width: fit-content;
+        height: fit-content;
+    }
+    .box h1{
+        font-size: 1.6rem;
+    }
+  
+    .box p{
+        font-size: 1rem;
+    }
+  
+    .register-btn button{
+        padding: 8px 15px;
+    }
+    .submit-container{
+        width: 35vw;
+        height: 55vh;
+    }
+    .form-group{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-group input{
+        width: 32vw;
+    }
+
+    .jumbotron button{
+        width: 28vw;
+        font-size: 1rem;
+        padding: 10px;
+        margin-left: 10;
+        margin-top: 30px;
+    }
+
+    .lock-key i{
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+
+    .lock-key p{
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .lock-key h1{
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .secret-text{
+        text-align: center;
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+     .footer{
+        padding: 1rem;
+        height: auto;
+        text-align: center;
+    }
+
+    .footer .row{
+        margin-left: 0;
+        float: none;
+        text-align: center;
+    }
+
+    .footer h5{
+        font-size: 1.1rem;
+    }
+
+    .footer p,
+    .footer .contents p{
+        font-size: 0.9rem;
+    }
+
+    .contents{
+        margin-top: 20px;
+        font-size: 1.2rem;
+    }
+    .reset-container{
+        padding: 15px;
+    }
+    .forget-container{
+       width: 90%;
+       padding: 25px;
+    }
+  
+    .forget-input{
+       padding: 10px;
+    }
+  
+    .forget-container h1{
+       font-size: 1.7rem;
+    }
+  
+    .forget-container button[type="submit"]{
+       font-size: 0.95rem;
+    }
+  
+    .resister-text{
+       font-size: 0.85rem;
+    }
+  
+    .resister-text button{
+       font-size: 0.95rem;
+    }
+}
+@media screen and (max-width: 480px){
+    .container{
+        width: 260px;
+        padding: 5px;
+        height: auto;
+    }
+    .container h1{
+        font-size: 1.3rem;
+    }
+    .input-group{
+        width: 230px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .input-group input{
+        padding: 3px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 30px;
+    }
+    .register-bt p{
+        font-size: 0.9rem;
+    }
+    .register-bt button{
+        font-size: 0.9rem;
+        padding: 6px;
+    }
+    .secret-h h2{
+        font-size: 1.5rem;
+    }
+    .hamburger{
+        font-size: 1.5rem;
+    }
+    .secret-container{
+        margin-top: 130px;
+    }
+    .login-container {
+        padding: 5px;
+    }
+  
+    .login-container h1{
+        font-size: 1.5rem;
+    }
+  
+    .login-input{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    .login-input input{
+        padding: 2px;
+    }
+  
+    .login-input i.fa-envelope,
+    .login-input i.fa-lock{
+        margin-bottom: 5px;
+        font-size: 1rem;
+    }
+  
+    .toggle-password{
+        top: 35px;
+        right: 10px;
+    }
+  
+    .form-actions button{
+        font-size: 0.95rem;
+        padding: 10px;
+    }
+  
+    .login-para{
+        font-size: 0.85rem;
+    }
+  
+    .login-para button{
+        font-size: 0.9rem;
+    }
+    .login-toggle{
+        left: 340px;
+    }
+    .contact-container{
+        padding: 15px;
+        margin-bottom: 1px;
+    }
+  
+    .contact-container h2{
+        font-size: 1.5rem;
+    }
+  
+    .contact-form input,
+    .contact-form textarea{
+        font-size: 0.95rem;
+    }
+  
+    .contact-form button{
+        font-size: 0.95rem;
+    }
+    .about-container h2{
+        font-size: 1.6rem;
+    }
+  
+    .about-description{
+        font-size: 1rem;
+    }
+  
+    .highlight h3,
+    .team h3 {
+        font-size: 1.1rem;
+    }
+     body{
+        flex-direction: column;
+    }
+  
+    .secret-img{
+        order: 2;
+        height: auto;
+        width: auto;
+    }
+  
+    .box{
+        order: 1;
+        height: fit-content;
+        width: fit-content;
+        margin-top: 280px;
+        margin-left: 40px;
+    }
+  
+    .box h1{
+        font-size: 1.4rem;
+    }
+  
+    .box p{
+        font-size: 0.95rem;
+        padding: 0 10px;
+    }
+  
+    .register-btn button{
+        font-size: 0.95rem;
+        padding: 8px 16px;
+    }
+  
+    .secret-img img.rotate-img{
+        width: 90%;
+        height: auto;
+    }
+    .submit-container{
+        width: 44vw;
+        height: 50vh;
+    }
+     .form-group input{
+        width: 30vw;
+        padding: 7px;
+    }
+    .jumbotron button{
+        font-size: 1rem;
+        padding: 5px;
+        width: 21vw;
+    }
+    .footer h5 {
+        font-size: 1rem;
+    }
+
+    .footer p,
+    .footer .contents p{
+        font-size: 0.85rem;
+    }
+
+    .contents{
+        margin-top: 15px;
+        font-size: 1rem;
+    }
+     .reset-container {
+        padding: 10px;
+        margin: 20px auto;
+    }
+
+    .reset-container input,
+    .reset-container button{
+        font-size: 0.95rem;
+    }
+    .forget-container{
+        padding: 20px;
+    }
+  
+    .forget-input{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+  
+    .forget-input i{
+        font-size: 1rem;
+    }
+  
+    .forget-container h1{
+        font-size: 1.5rem;
+    }
+  
+    .forget-container button[type="submit"]{
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+  
+    .resister-text{
+        font-size: 0.8rem;
+    }
+  
+    .resister-text button{
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 390px){
+    .submit-container{
+        width: 54vw;
+        height: 50vh;
+    }
+     .form-group input{
+        width: 30vw;
+        padding: 7px;
+    }
+    .jumbotron button{
+        font-size: 1rem;
+        padding: 5px;
+        width: 21vw;
+    }
+}
+@media screen and (max-width: 360px){
+    .login-toggle{
+        left: 240px;
+    }
+}
+

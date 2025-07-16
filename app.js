@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());
 
-mongoose.connect("mongodb://localhost:27017/secrets", {
+mongoose.connect("mongodb+srv://rohitk60316:g6VM1yp7Wt1R7bwS@cluster0.sroy8pl.mongodb.net/to_do_list?retryWrites=true&w=majority&appName=Cluster0", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }).then(() => console.log("MongoDB Database connected successfully"))
