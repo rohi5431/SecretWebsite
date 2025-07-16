@@ -8,7 +8,7 @@ and reset their passwords. Built using
 5. JWT
 
 ---
-Live server: https://secretwebsite-5.onrender.com
+Live server: https://secretwebsite-8.onrender.com
 
 ## ✨ Features
 
