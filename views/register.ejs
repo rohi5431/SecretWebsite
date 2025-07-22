@@ -1,4 +1,9 @@
 <%- include('partials/header') %>
+<% if (error) { %>
+  <script>
+    alert("<%= error %>");
+  </script>
+<% } %>
 <div class="container reg-container">
   <h1>Sign-Up</h1>
   <form action="/register" method="POST" id="register-form">
