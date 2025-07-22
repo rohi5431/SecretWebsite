@@ -97,3 +97,15 @@ function toggleMenu() {
     const nav = document.getElementById('navItems');
     nav.classList.toggle('show');
 }
+
+const urlParams = new URLSearchParams(window.location.search);
+    const errorMessage = urlParams.get('error');
+    const successMessage = urlParams.get('success');
+
+    if(errorMessage){
+       alert(decodeURIComponent(errorMessage));
+    }
+
+    if(successMessage){
+       alert(decodeURIComponent(successMessage));
+    }
